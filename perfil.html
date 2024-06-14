@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/Captura_de_tela_2024-03-16_135156-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeliFood | Favorites</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="headerbar">
+                <div class="account"> 
+                    <ul>
+                        <a href="/index.html">
+                            <li>
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                            </li>
+                        </a>
+                        <div class="search" id="searchinput1">
+                            <input type="search">
+                            <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                        </div>
+                        <a href="/carrinho.html">
+                            <div class="cart-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span>3</span>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="/index.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="/about.html">
+                            <li>About</li>
+                        </a>
+                        <a href="/restaurant.html">
+                            <li>Restaurant</li>
+                        </a>
+                        <a href="/favorites.html">
+                            <li>Favorites</li>
+                        </a>
+                        <a href="/order.html">
+                            <li>Order History</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="./images/Captura_de_tela_2024-03-16_135156-removebg-preview.png" alt="">
+            </div>
+            <div class="bar">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark" id="hdcross"></i>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="/index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="/about.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/restaurant.html">
+                        <li>Restaurant</li>
+                    </a>
+                    <a href="/favorites.html">
+                        <li>Favorites</li>
+                    </a>
+                    <a href="/order.html">
+                        <li>Order History</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="account">
+                <ul>
+                    <a href="/index.html">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                        </li>
+                    </a>
+                    <div class="search" id="searchinput2">
+                        <input type="search" >
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <a href="/carrinho.html">
+                        <div class="cart-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>3</span>
+                        </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        body{
+            background: linear-gradient(to right, #ececec, #f9ca24);
+            overflow: hidden;
+            background-image: url(/images/bg1.jpg);
+
+        }
+        
+        .container{
+            background: #fff;
+            width: 740px;
+            height: 480px;
+            margin: 0 auto;
+            position: relative;
+            margin-top: 4%;
+            box-shadow: 2px 5px 20px
+            rgba(119,119,119,0.5);
+        }
+        
+        .leftbox{
+            float: left;
+            top: -5%;
+            left: 7%;
+            position: absolute;
+            width: 12%;
+            height: 110%;
+            background: #f3f310;
+            box-shadow: 3px 3px 10px 
+            rgba(119,119,119,.5);
+            border: .1em solid #fff;
+        }
+        
+        nav a {
+            list-style: none;
+            padding: 35px;
+            font-size: 1.2em;
+            display: block;
+            transition: all .3s ease-in-out;
+        }
+        
+        nav a:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        
+        .fa-user, .fa-credit-card, .fa-tv, .fa-tasks, .fa-cog {
+            color: #ffffff;
+        }
+
+        .fa-user:hover{
+            color: #000000;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        .fa-credit-card:hover{
+            color: #000000;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        .fa-tv:hover{
+            color: #000000;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        .fa-tasks:hover{
+            color: #000000;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        
+        .fa-cog:hover{
+            color: #000000;
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        nav a:first-child{
+           margin-top: 7px; 
+        }
+        
+        .rightbox{
+            width: 60%;
+            margin-left: 27%;
+            padding-top: 10px;
+        }
+        
+        .tabShow{
+            transition: all .5s ease-in;
+            width: 80%;
+        }
+
+        
+
+
+
+        
+        h1{
+            font-family: "Montserrat", sans-serif;
+            color: #000000;
+            font-size: 1.2rem;
+            margin-top: 40px;
+            margin-bottom: 35px;
+            font-weight: 500;
+        }
+        
+        h2{
+            color: #565555;
+            font-family: "Roboto", sans-serif;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 1px;
+            margin-left: 2px;
+            margin-top: 10px;
+        }
+        
+        .input, p {
+            border: 0;
+            border-bottom: 1px solid #000000;
+            width: 90%;
+            font-weight: 'montserrat', sans-serif;
+            font-size: .8em;
+            padding: 8px 0;
+            color: #000000;
+            outline: none;
+        }
+        
+        span{
+            font-size: .7em;
+        }
+        
+        .btn{
+            font-family: "roboto", sans-serif;
+            text-transform: uppercase;
+            font-size: 15px;
+            border: 0;
+            color: #fff;
+            background: #000000;
+            padding: 7px 15px;
+            box-shadow: 0px 2px 4px 0px rgba(0,0,0,.2);
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        
+        .tabShow{
+            display: none;
+        }
+
+    </style>    
+
+    <div class="team">
+    <div class="container">
+        <div class="leftbox">
+          <nav>
+            <a onclick="tabs(0)" class="tab active">
+                <i class="fa fa-user"></i>
+            </a>
+            <a onclick="tabs(1)" class="tab">
+                <i class="fa fa-credit-card"></i>
+            </a>
+            <a onclick="tabs(2)" class="tab">
+                <i class="fa fa-tv"></i>
+            </a>
+            <a onclick="tabs(3)" class="tab">
+                <i class="fa fa-tasks"></i>
+            </a>
+            <a onclick="tabs(4)" class="tab">
+                <i class="fa fa-cog"></i>
+            </a>
+          </nav>
+        </div>
+    
+
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Informações Pessoais</h1>
+                <h2>Nome Completo</h2>
+                <input type="text" class="input" value="Luana Cardoso Lima">
+                <h2>Aniversário</h2>
+                <input type="text" class="input" value="20 de Abril de 1992">
+                <h2>Gênero</h2>
+                <input type="text" class="input" value="Femino">
+                <h2>Email</h2>
+                <input type="text" class="input" value="luanalima@cardoso.gmail.com">
+                <h2>Senha</h2>
+                <input type="text" class="input" value="senha123" class="input" value="brightcode">
+                <button class="btn">Atualizar</button>
+            </div>
+
+            <div class="payment tabShow">
+                <h1>Informações de Pagamento</h1>
+                <h2>Método de pagamento</h2>
+                <input type="text" class="input" value="MasterCard - 0202 **** **** 7336">
+                <h2>Endereço</h2>
+                <input type="text" class="input" value="Brasil, SP - Rua Figueira, 81">
+                <h2>CEP</h2>
+                <input type="text" class="input" value="05720-780">
+                <h2>cartão de pagamento</h2>
+                <input type="text" class="input" value="Master">
+                <button class="btn">Atualizar</button>
+            </div>
+
+            <div class="subscription tabShow">
+                <h1>Informações de Assinatura</h1>
+                <h2>Data de Pagamento</h2>
+                <p>15...</p>
+                <h2>Próximas cobranças</h2>
+                <p>$80.56<span>incluíndo taxas</span></p>
+                <h2>Plano</h2>
+                <p>Plano limitado</p>
+                <h2>Por mês</h2>
+                <p>$107.99/mês</p>
+
+                <button
+                class="btn">Atualizar</button>
+            </div>
+
+            <div class="privacy tabShow">
+                <h1>Configurações de Privacidade</h1>
+                <h2>Gerenciar e-mail de Notificações</h2>
+<p></p>
+                <h2>Gerenciar configurações de privacidade</h2>
+                <p></p>
+                <h2>Termos para uso</h2>
+                <p></p>
+                <h2>Anúncio personalizado
+                    Experiência</h2>
+                <p></p>
+                <h2>Proteção de conta</h2>
+                <p></p>
+
+                <button
+                class="btn">Atualizar</button>
+            </div>
+            <div class="settings tabShow">
+                <h1>Configuração da Conta</h1>
+                <h2>Lista de observação</h2>
+<p></p>
+                <h2>Manter assinatura</h2>
+                <p></p>
+                <h2>Cancelar assinatura</h2>
+                <p></p>
+                <h2>Seus serviços</h2>
+                <p></p>
+                <h2>Referências</h2>
+                <p></p>
+
+                <button
+                class="btn">Atualizar</button>
+            </div>
+        </div>
+        </div>
+        </div>
+
+    <script src="jquery/jquery.js"></script>
+    <script>
+        const tab8tn = 
+        document.querySelectorAll(".tab");
+        const tab = 
+        document.querySelectorAll(".tabShow");
+
+        function tabs(panelIndex) {
+            tab.forEach(function(node) {
+                node.style.display = "none";
+            });
+            tab[panelIndex].style.display = "block";
+        }
+        tabs(0);
+    </script>
+    <script>
+        $(".tab").click(function(){
+            $(this).addClass(active).siblings().removeClass("active");
+        })
+    </script>
+</body>
+</html>
